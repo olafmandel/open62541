@@ -616,8 +616,8 @@ processBinaryMessage(UA_Server *server, UA_Connection *connection,
                  "Connection %i | Received a packet.", connection->sockfd);
 
     #ifdef UA_DUMP_HEX_PKG
-	UA_dump_hex_pkg(message->data, message->length);
-	#endif
+    UA_dump_hex_pkg(message->data, message->length);
+    #endif
 
     UA_Boolean realloced = UA_FALSE;
     UA_StatusCode retval = UA_Connection_completeChunks(connection, message, &realloced);
